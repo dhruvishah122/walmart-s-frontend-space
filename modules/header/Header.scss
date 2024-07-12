@@ -1,0 +1,147 @@
+.header_wrapper {
+  background-color: $brand_color;
+  color: $white_color;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  .header {
+    position: relative;
+    @include displayCenter(center, space-between);
+    gap: 10px;
+    padding: 5px 25px;
+    .logo {
+      padding: 8px 20px;
+      border-radius: 50px;
+      cursor: pointer;
+      margin-left: -15px;
+      &:hover {
+        background-color: $hover_color;
+      }
+    }
+    .menu_wrapper {
+      @include displayCenter(center, center);
+      gap: 20px;
+      .menu {
+        font-size: 30px;
+        @include displayCenter(center, center);
+      }
+    }
+
+    .header_left {
+      @include displayCenter(center, center);
+      cursor: pointer;
+      .icons {
+        @include displayCenter(center, center);
+        gap: 10px;
+        font-size: 14px;
+        font-weight: 800;
+        padding: 15px 20px;
+        border-radius: 50px;
+        &:hover {
+          background-color: $hover_color;
+        }
+        .icon {
+          @include displayCenter(center, center);
+        }
+      }
+    }
+    .search_wrapper {
+      @include displayCenter(center, space-between);
+      width: 600px;
+      border: 1px solid $brand_color;
+      border-radius: 50px;
+      background-color: $white_color;
+      padding: 6px 5px 6px 30px;
+      .input {
+        width: 100%;
+        outline: none;
+        border: none;
+        &::placeholder {
+          font-size: 14px;
+        }
+      }
+      .search_icon {
+        background-color: $icon_color;
+        @include displayCenter(center, center);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        color: $black_color;
+      }
+    }
+    .header_right {
+      @include displayCenter(center, center);
+      cursor: pointer;
+      position: relative;
+      .header_right_wrapper {
+        @include displayCenter(center, center);
+        gap: 10px;
+        padding: 8px 20px;
+        border-radius: 50px;
+        &:hover {
+          background-color: $hover_color;
+        }
+        .header_right_icon {
+          font-size: 20px;
+          @include displayCenter(center, center);
+        }
+        .num_of_items {
+          position: absolute;
+          top: 12px;
+          left: 28px;
+          // padding: 5px 10px;
+          font-size: 12px;
+          // background-color: yellow;
+          // border-radius: 50%;
+          color: #ffff;
+        }
+        .header_right_text_wrapper {
+          .small_text {
+            font-size: 12px;
+          }
+          .large_text {
+            font-size: 14px;
+            font-weight: 800;
+          }
+        }
+      }
+      .cart_wrapper {
+        padding: 8px 20px;
+        border-radius: 50px;
+        &:hover {
+          background-color: $hover_color;
+        }
+        .num_of_cart_items {
+          // position: absolute;
+          // left: 5px;
+          // padding: 5px;
+          font-size: 12px;
+          margin-left: -5px;
+        }
+        .cart_icon {
+          font-size: 22px;
+          display: flex;
+        }
+        .price {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .horizontal {
+    color: $white_color;
+  }
+  .sidebar {
+    position: absolute;
+    top: 120px;
+    left: 0;
+    height: calc(100vh - 120px);
+    background-color: rgba(119, 127, 151, 0.281);
+    backdrop-filter: blur(10px);
+    z-index: 9;
+    transition: all 0.5s ease;
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,43 @@
+.headerFeatures_wrapper {
+  margin-top: 5px;
+  padding: 5px 25px;
+  @include displayCenter(center, space-between);
+  font-size: 14px;
+  .headerFeatures_left {
+    @include displayCenter(center, center);
+    gap: 10px;
+    .headerFeatures_left_img {
+      cursor: pointer;
+      @include displayCenter(center, center);
+      gap: 10px;
+    }
+    .vertical {
+      border-left: 1px solid $white_color;
+      height: 20px;
+    }
+    .headerFeatures_left_text {
+      cursor: pointer;
+      @include displayCenter(center, center);
+    }
+    .headerFeatures_left_array_wrapper {
+      @include displayCenter(center, center);
+      gap: 10px;
+      cursor: pointer;
+      .icons {
+        @include displayCenter(center, center);
+        gap: 10px;
+      }
+    }
+  }
+
+  .headerFeatures_right {
+    @include displayCenter(center, center);
+    gap: 20px;
+    .headerFeatures_right_text {
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.sidebar_item_wrapper {
+  @include displayCenter(center, flex-start);
+  gap: 15px;
+  margin-top: 30px;
+  cursor: pointer;
+  color: #ffff;
+  .sidebar_item_text {
+    font-size: 14px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

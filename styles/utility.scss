@@ -1,0 +1,27 @@
+@mixin displayCenter($align-items, $justify-content) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xlg: 1200px;
+
+.container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.displayNone {
+  display: none;
+}
+
+$brand_color: #0071dc;
+$white_color: #ffffff;
+$icon_color: #ffc220;
+$black_color: #000;
+$hover_color: #004f9a;

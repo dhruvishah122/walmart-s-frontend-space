@@ -1,0 +1,52 @@
+.login {
+  padding: 160px 25px 50px 25px;
+  .login_container {
+    @include displayCenter(center, center);
+    flex-direction: column;
+    .login_top {
+      .logo {
+        @include displayCenter(center, center);
+        cursor: pointer;
+      }
+      h2 {
+        margin-top: 10px;
+      }
+    }
+    .login_wrapper {
+      @include displayCenter(center, center);
+      flex-direction: column;
+      margin-top: 50px;
+      .input_wrapper {
+        display: flex;
+        flex-direction: column;
+        label {
+          font-size: 18px;
+          margin-top: 10px;
+        }
+        input {
+          padding: 10px;
+          outline: none;
+          border-radius: 5px;
+          width: 250px;
+          margin-top: 5px;
+        }
+      }
+      p {
+        color: red;
+        margin-top: 5px;
+      }
+      .login_btn {
+        padding: 12px 40px;
+        width: 270px;
+        border-radius: 10px;
+        background-color: $brand_color;
+        font-size: 16px;
+        color: $white_color;
+        margin-top: 10px;
+        border: none;
+        cursor: pointer;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+.pageNotFound {
+  padding: 135px 25px 15px 25px;
+  @include displayCenter(center, center);
+  .pageNotFound_wrapper {
+    @include displayCenter(center, center);
+    background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+    border-radius: 20px;
+    flex-direction: column;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    border-radius: 20px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover {
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+    h1 {
+      font-size: 150px;
+    }
+    h2 {
+      font-size: 80px;
+    }
+    a {
+      border: none;
+      outline: none;
+      font-size: 16px;
+      display: inline-block;
+      background-color: #000;
+      padding: 12px 67px;
+      color: #ffff;
+      cursor: pointer;
+      margin-top: 10px;
+      margin-top: 30px;
+      border-radius: 20px;
+      text-decoration: none;
+      margin-bottom: 100px;
+    }
+  }
+}
+
+@media only screen and (max-width: $sm) {
+  .pageNotFound {
+    .pageNotFound_wrapper {
+      h1 {
+        font-size: 80px;
+      }
+      h2 {
+        font-size: 30px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 350px) {
+  .pageNotFound {
+    padding: 10px;
+    .pageNotFound_wrapper {
+      width: 330px;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+footer {
+  background-color: $brand_color;
+  .footer_wrapper {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+
+    .links {
+      flex: 0 0 20%;
+      margin-top: 10px;
+      a {
+        text-decoration: none;
+        color: #fff;
+        @include displayCenter(center, center);
+      }
+    }
+    p {
+      color: #fff;
+      @include displayCenter(center, center);
+      margin-top: 30px;
+      font-size: 14px;
+      text-align: center;
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: $md) {
+  .footer_wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .link {
+    flex: 0 0 100%;
+    text-align: center;
+  }
+}
