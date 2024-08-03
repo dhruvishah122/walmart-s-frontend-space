@@ -1,4 +1,5 @@
 'use client'
+import { Helmet } from 'react-helmet';
 import {useQuery} from '@tanstack/react-query'
 import axios from 'axios'
 import Image from 'next/image'
@@ -12,7 +13,7 @@ import {increment} from '@/redux/wishListSlice'
 import {cartIncrement} from '@/redux/cartListSlice'
 import {addToWishListItem} from '@/redux/wishListItemSlice'
 import {addToCartList} from '@/redux/cartItemSlice'
-
+import './button.css'
 const fetchProductById = async (id: any) => {
   try {
     const res = await axios.get(`https://fakestoreapi.com/products/${id}`)
@@ -90,7 +91,14 @@ const SingleProductPage = ({id}: {id: string}) => {
   }
 
   return (
+
     <div className='SingleProductPage'>
+     <Helmet>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        />
+      </Helmet>
       <div className='SingleProductPage_wrapper'>
         <div className='SingleProductPage_left'>
           <Image
@@ -101,6 +109,9 @@ const SingleProductPage = ({id}: {id: string}) => {
             className='img'
           />
         </div>
+
+
+
         <div className='SingleProductPage_right'>
           <h2 className='product_title'>{data.title}</h2>
           <div className='price_wrapper'>
@@ -112,6 +123,16 @@ const SingleProductPage = ({id}: {id: string}) => {
               </span>
             </h3>
           </div>
+      <div class='btn_room'>
+    <a href="http://127.0.0.1:5000" class="circle-button-link">
+        <button class="circle-button">
+            <span class="material-symbols-outlined">
+                checkroom
+            </span>
+        </button>
+    </a>
+</div>
+
           <div className='product_description'>
             <h3>Description:</h3>
             <div className='description'>{data.description}</div>
@@ -140,6 +161,7 @@ const SingleProductPage = ({id}: {id: string}) => {
               <div className='price'>${price?.toFixed(2)}</div>
             </div>
           </div>
+
           <div className='btn_wrapper'>
             <button
               onClick={() => handleOnWishlistClick(data)}
