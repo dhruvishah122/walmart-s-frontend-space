@@ -100,16 +100,6 @@ const SingleProductPage = ({id}: {id: string}) => {
         />
       </Helmet>
       <div className='SingleProductPage_wrapper'>
-        <div className='btn_room'>
-    <a href="http://127.0.0.1:5000" className="circle-button-link">
-    Try-your-choice
-        <button className="circle-button">
-            <span className="material-symbols-outlined">
-                checkroom
-            </span>
-        </button>
-    </a>
-</div>
         <div className='SingleProductPage_left'>
           <Image
             src={data.image}
@@ -118,7 +108,6 @@ const SingleProductPage = ({id}: {id: string}) => {
             height={300}
             className='img'
           />
-
         </div>
 
 
@@ -134,7 +123,15 @@ const SingleProductPage = ({id}: {id: string}) => {
               </span>
             </h3>
           </div>
-
+      <div className='btn_room'>
+    <a href="http://127.0.0.1:5000" className="circle-button-link">
+        <button className="circle-button">
+            <span className="material-symbols-outlined">
+                checkroom
+            </span>
+        </button>
+    </a>
+</div>
 
           <div className='product_description'>
             <h3>Description:</h3>
